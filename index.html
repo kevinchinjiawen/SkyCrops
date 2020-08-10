@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+   <html>
+	<head>
+	    <title>Welcome to Sky Crops</title>
+	    <meta name = " viewport " content = "width=device-width , initial scale = 1 ">
+	     
+	     
+		<link href = "css/style.css" rel = "stylesheet" type = "text/css" >
+	</head>
+    <body>
+		<div class = "loader hidden">
+			<img src = "images/loading.gif" alt = "Loading..."/>
+		</div>
+
+		<div class="navBarContainer">
+			<nav class="navbar">
+				<div class="hamburgerMenuContainer">
+					<div class="hamburgerMenu">
+						<div class=" line line1"></div>
+						<div class=" line line2"></div>
+						<div class=" line line3"></div>
+					</div>
+					
+				</div>
+				<div>
+					<ul class="navbarMenu">
+						<li class="navbarItems">
+							<a href="index.html" class="navLink">Home</a>
+						</li>
+						<li class="navbarItems">
+							<a href="productPage.html" class="navLink">Products</a>
+						</li>
+						<li class="navbarItems">
+							<a href="#" class="navLink">Guides</a>
+						</li>
+						<li class="navbarItems">
+							<a href="#" class="navLink">About Us</a>
+						</li>
+						<li class="navbarItems">
+							<a href="#" class="navLink">Customer Services</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		<script src="script.js"></script>
+		</div>
+		<article class="contentContainer">
+			<div class="content">
+				<header class="leavesIntro">
+					<div class="headerContainer">
+						<div class="skyCropsLogoContainer">
+							<a href="index.html">
+								<div class="skyCropsLogoImage"></div>
+							</a>
+						</div>
+						<div class="blankSpaceBaby"></div>
+						<div class="signInButtonContainer">
+							<a href="#" class="signLink" id="signInOnClick">
+								<div class="signInButton">Sign In</div>
+								
+							</a>
+						</div>
+						<div class="signUpButtonContainer">
+							<a href="#" class="signLink" id="signUpOnClick">
+								<div class="signUpButton">Sign Up</div>
+							</a>
+						</div>
+						<div class="cartButtonContainer">
+							<a href="#">
+								<div class="cartButtonImage"></div>
+							</a>
+						</div>
+						<div class="blankSpace"></div>
+					</div>
+					
+				</header>
+				<video autoplay muted loop class="springVideoBackground"><source src="videos/springVideoBackground.mp4"></video>
+				<div class="wordingsContainer">
+					<div class="wording1">
+						<h1>天然。</h1>
+					</div>
+					<div class="wording6">Au Naturale.</div>
+				</div>
+				<div class="facebookButtonContainer">
+					<a href="#">
+						<div class="facebookButton"></div>
+					</a>
+				</div>
+			</div>
+			<div class="bgVideoOverlay"></div>
+
+			<div class="bgModal">
+				<div class="modalContent">
+					<div class="close">+</div>
+					<div class="accountImage"></div>
+					<div class="formContainer">
+						<form action="" id="signInForm">
+							<input type="email" placeholder="E-Mail" id="signInEmail">
+							<input type="password" placeholder="Password" id="signInPassword">
+							<div class="buttonContainer">
+								<a href="#" class="button">Submit</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="bgModal">
+				<div class="modalContent">
+					<div class="close">+</div>
+					<div class="accountImage"></div>
+					<div class="formContainer">
+						<form action="" id ="signUpForm">
+							<input type="email" placeholder="E-Mail" id="signUpEmail">
+							<input type="password" placeholder="Password" id="signUpPassword">
+							<div class="buttonContainer">
+								<a href="#" class="button">Submit</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<script src="modalScript.js"></script>
+			<script src="auth.js"></script>
+		</article>
+		<section>
+			<div class="bottomSectionContainer">
+				<div class="followUs-Container">
+					<div class="followUs">
+						<h2>Follow Us</h2>
+					</div>
+				</div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</section>
+
+		<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+		<script>
+			// Your web app's Firebase configuration
+			var firebaseConfig = {
+			  apiKey: "AIzaSyDJF50eMiBEqSDA8ML9ncAfodVfXVYySjc",
+			  authDomain: "skycrops-f11fe.firebaseapp.com",
+			  databaseURL: "https://skycrops-f11fe.firebaseio.com",
+			  projectId: "skycrops-f11fe",
+			};
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+			
+			const auth = firebase.auth();
+			const db = firebase.firestore();
+
+		  </script>
+	</body>		
+
+   </html>
