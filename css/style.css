@@ -1,0 +1,387 @@
+*{
+	margin : 0;
+	padding : 0;
+	box-sizing:border-box;
+}
+
+.loader{
+	position : fixed;
+	z-index: 99;
+	top : 0;
+	left : 0;
+	width : 100%;
+	height : 100%;
+	background-color : white;
+	display : flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.loader >img {
+	width : 15%;
+}
+
+.loader.hidden{
+	animation : fadeOut 1.5s;
+	animation-fill-mode: forwards;
+}
+
+
+@keyframes fadeOut{
+	100%{
+		opacity:0;
+		visibility: hidden;
+	}
+	
+
+}
+
+.headerContainer{
+	display:flex;
+	align-items:center;
+	text-align:center;
+	justify-content:center;
+	position:fixed;
+	width:100%;
+	z-index:9;
+}
+
+.skyCropsLogoImage{
+	width:120px;
+	height:120px;
+	background-image:url('https://vectorise.net/logo/wp-content/uploads/2013/03/Logo-DHerbs.png');
+	background-size:cover;
+	margin-left:50px;
+}
+
+.blankSpaceBaby{
+	width:150px;
+	flex-grow:2;
+}
+
+.signLink{
+	color:darkslateblue;
+	text-decoration:none;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-weight:bold;
+}
+
+.signInButton{
+	width:100px;
+	height:40px;
+	background-color:chartreuse;
+	background-size:100px 50px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	border-radius:15%;
+}
+
+.signInButton:hover{
+	color:aquamarine;
+	background-color:green;
+	box-shadow: 5px 40px -10px black;
+	transition:all 0.5s ease-in;
+}
+
+.signUpButton{
+	width:100px;
+	height:40px;
+	background-color:chartreuse;
+	background-size:100px 50px;
+	margin-left:20px;
+	margin-right:20px;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 15%;
+}
+
+.signUpButton:hover{
+	color:aquamarine;
+	background-color:green;
+	box-shadow: 5px 40px -10px black;
+	transition:all 0.5s ease-in;
+}
+
+.cartButtonImage{
+	width:80px;
+	height:80px;
+	background-image:url('../images/cartButton.jpg');
+	background-size: cover;
+	border-radius:50%;
+}
+
+.blankSpace{
+	width:130px;
+}
+
+.navbar{
+	width:250px;
+	height:100vh;
+	position:fixed;
+	top:0;
+	right:0;
+	display:flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items:center;
+	text-align:center;
+	background-color:green;
+	border-radius: 0 0 0 50%;
+	right:-300px;
+	transition:right 0.8s cubic-bezier(1, 0, 0, 1);
+	z-index:10;
+}
+
+.change{
+	right:0;
+}
+
+.hamburgerMenu{
+	width:35px;
+	height:35px;
+	position:fixed;
+	top:45px;
+	right:50px;
+	margin:10px 0;
+	cursor:pointer;
+	display:flex;
+	flex-direction: column;
+	justify-content: space-around;
+	
+}
+
+.line{
+	width:100%;
+	height:5px;
+	background-color:gold;
+	transition: all 0.8s;
+}
+
+.change .line1{
+	transform:rotateZ(-405deg) translate(-8px,8px);
+	
+}
+
+.change .line2{
+	opacity:0;
+}
+
+.change .line3{
+	transform:rotateZ(405deg) translate(-8px,-8px);
+}
+
+.navbarItems{
+	list-style: none;
+	margin:40px;
+	font-size:20px;
+	font-weight:300;
+}
+
+.navLink{
+	list-style: none;
+	text-decoration: none;
+	color:gold;
+	letter-spacing: 1px;
+	text-transform:uppercase;
+	position:relative;
+	padding:3px 0;
+}
+
+.navLink::before,
+.navLink::after{
+	content:'';
+	width:100%;
+	height:3px;
+	background-color:purple;
+	position:absolute;
+	left:0;
+	transform:scaleX(0);
+	transition:transform 1s;
+}
+
+.navLink::before{
+	top:0;
+	transform-origin:left;
+}
+
+.navLink::after{
+	bottom:0;
+	transform-origin:right;
+}
+
+.navLink:hover{
+	color:aqua;
+	transition:0.5s ease-in;
+	transition:0.5s ease-out;
+}
+
+.navLink:hover::before,
+.navLink:hover::after{
+	transform:scaleX(1);
+}
+
+.contentContainer{
+	overflow:hidden;
+}
+
+.springVideoBackground{
+	width:100%;
+}
+
+.bgVideoOverlay{
+	background-color:white;
+	opacity:0.55;
+	z-index:1.1;
+	position: absolute;
+	width:100%;
+	height:860px;
+	top:0;
+}
+
+.content{
+	text-align:center;
+	
+}
+.wordingsContainer{
+	font-weight:bold;
+	letter-spacing: 5px;
+}
+
+.wording1{
+	color:orange;
+	font-size:100px;
+	z-index:2;
+	top:0;
+	position:absolute;
+	width:100%;
+	margin-top:300px;
+}
+
+.wording6{
+	color:orange;
+	font-size:100px;
+	z-index:2;
+	position: absolute;
+	top:0;
+	width: 100%;
+	margin-top:500px;
+	
+}
+
+.facebookButton{
+	z-index:20;
+	background-image:url('../images/facebookButton.jpg');
+	height:60px;
+	width:6%;
+	background-size:contain;
+	background-repeat: no-repeat;
+	position:fixed;
+	top:0;
+	left:0;	
+	margin-top:300px;
+}
+
+.bottomSectionContainer{
+	height:300px;
+	background-color:black;
+}
+
+.followUs{
+	color:white;
+}
+
+.bgModal{
+	width:100%;
+	height:1150px;
+	position:absolute;
+	background-color: rgba(0,0,0,0.7);
+	display:none;
+	justify-content: center;
+	top:0;
+	z-index:3;
+	transition:0.5s;
+}
+
+.modalContent{
+	width:33%;
+	height:500px;
+	position:fixed;
+	margin-top:150px;
+	display:flex;
+	flex-direction:column;
+	background-color:white;
+	align-items:center;
+	border-radius:5%;
+}
+
+.close{
+	transform:rotate(45deg);
+	font-size:42px;
+	font-weight: bold;
+	top:10px;
+	right:20px;
+	position:absolute;
+	cursor:pointer;
+	transition:0.5s;
+}
+
+.close:hover{
+	transform:rotate(225deg);
+}
+
+.accountImage{
+	width:18%;
+	height:90px;
+	background-image: url('../images/accounts.jpg');
+	background-size:cover;
+	margin:10px;
+}
+
+input{
+	width:100%;
+	padding: 10px 0px;
+	margin:30px;
+}
+
+.formContainer{
+	width:70%;
+	margin-top: 30px;
+}
+
+form{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items:center;
+}
+
+.buttonContainer{
+	width:40%;
+	height:50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin:10px;
+}
+
+.button{
+	background-color: blue;
+	border: 2px solid white;
+	border-radius: 30px;
+	text-decoration: none;
+	padding: 10px 28px;
+	color: white;
+	margin-top: 10px;
+	display: inline-block;
+	text-transform: uppercase;
+}
+
+.button:hover{
+	background-color: white;
+	color:blue;
+	border: 2px blue solid;
+	transition:0.2s;
+}
